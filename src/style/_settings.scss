@@ -1,0 +1,106 @@
+@font-face {
+    font-family: "font-1";
+    src: url(../assets/fonts/Questrial-Regular.ttf);
+}
+
+@font-face {
+    font-family: "font-2";
+    src: url(../assets/fonts/Michroma-Regular.ttf);
+}
+
+$font-1: "font-1",
+sans-serif;
+$font-2: "font-2",
+serif;
+/*  -------------------- colors ---------------------- */
+$color-2: #191F22;
+$color-1: #9a402f;
+$color-3: #964c17;
+$color-4: #cc7c24;
+$color-5: #ccc4bc;
+$black: rgb(40, 40, 40);
+$red: rgb(253, 87, 87);
+/*  -------------------- padding ---------------------- */
+$item-tp: 50px;
+$item-bp: 50px;
+$item-lp: 50px;
+$item-rp: 50px;
+
+$title-tp: 30px;
+$title-bp: 30px;
+$title-lp: 30px;
+$title-rp: 30px;
+/*  -------------------- margin ---------------------- */
+$item-tm: 50px;
+$item-bm: 50px;
+$item-lm: 50px;
+$item-rm: 50px;
+
+$title-tm: 30px;
+$title-bm: 30px;
+$title-lm: 30px;
+$title-rm: 30px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    color: $color-5;
+
+    &::selection {
+        color: $color-1;
+        background: $color-2;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+a,
+a:visited {
+    color: $color-1;
+    opacity: .7;
+
+}
+
+body {
+    font-family: $font-1;
+    height: 100vh;
+    width: 100%;
+    background-color: $color-1;
+    color: $black;
+    overflow-x: hidden;
+
+    @media screen and (max-width: 430px) {
+        position: relative;
+        max-width: 100vw;
+        overflow-y: initial;
+    }
+}
+
+main {
+    position: relative;
+}
+
+.button {
+    background: $color-3;
+    height: 55px;
+    width: 140px;
+    border-radius: 50px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+        letter-spacing: 1px;
+        color: $color-2;
+    }
+}

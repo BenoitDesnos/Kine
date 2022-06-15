@@ -1,0 +1,150 @@
+.home-main {
+    background-image: url(./../../../public/assets/img/lady-ball.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: scroll;
+    background-repeat: repeat-y;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+    text-align: justify;
+    border-top: black dashed 2px;
+
+    &__presentation {
+        padding-top: $item-tp;
+        display: flex;
+        flex: 1;
+        margin: auto;
+        width: 80%;
+
+        .about__img {
+            flex: 1;
+            padding-top: 0;
+
+            img {
+                width: 30%;
+            }
+        }
+    }
+
+    .about__text {
+        flex: 2;
+
+        h2 {
+            padding-top: $title-tp;
+        }
+
+        p {
+            z-index: 1;
+            padding-top: $item-tp;
+
+            strong {
+                color: lighten($color: $color-4, $amount: 20%);
+                font-weight: bolder;
+            }
+        }
+    }
+
+    * {
+        z-index: 1;
+    }
+
+    &__img {
+        display: flex;
+        flex-flow: row wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+        padding-top: $item-tp;
+        padding-bottom: $item-bp;
+
+        img {
+            position: relative;
+            flex: 1 0;
+            max-width: 550px;
+            min-width: 300px;
+            margin: 10px;
+
+        }
+    }
+
+    &__team {
+        background-color: $color-2;
+        display: flex;
+        flex-flow: row wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: $item-tp;
+        padding-bottom: $item-bp;
+
+        .person__presentation {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            max-width: 300px;
+
+            &:hover {
+
+
+                p {
+                    transform: translateY(-200px);
+                    transition: all 0.3s;
+                    opacity: 1;
+                }
+
+                img {
+                    opacity: 0.5;
+                    transition: opacity 0.3s;
+                }
+
+                h3 {
+                    text-decoration: underline;
+                }
+
+            }
+
+            p {
+                padding-top: $title-tp;
+                transition: all 0.2s;
+                max-width: 250px;
+                margin: auto;
+                opacity: 0;
+            }
+
+            h3 {
+                text-decoration: line-through;
+            }
+        }
+
+        img {
+            position: relative;
+            flex: 1 0;
+            max-width: 300px;
+            min-width: 200px;
+            margin: 10px;
+            transition: opacity 0.3s;
+
+
+
+        }
+    }
+}

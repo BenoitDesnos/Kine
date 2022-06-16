@@ -9,15 +9,13 @@ const Navigation = () => {
         document.querySelector(
           "#root > div > div > div.navigation"
         ).style.backgroundColor = "#191F22";
-
-        console.log("test");
       } else {
         document.querySelector(
           "#root > div > div > div.navigation"
         ).style.backgroundColor = "transparent";
       }
     });
-  });
+  }, []);
   return (
     <div className="navigation">
       <SocialNetwork />

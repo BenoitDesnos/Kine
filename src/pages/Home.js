@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "./../components/Navigation";
 import { motion } from "framer-motion";
+import Button from "../components/Button";
 
 const Home = () => {
   const variants = {
@@ -39,7 +40,7 @@ const Home = () => {
         </div>
         <div className="about">
           <div className="about__presentation">
-            <div className="about__img">
+            <div className="about__presentation__img">
               <img src="./assets/img/bike.svg" alt="" />
             </div>
             <div className="about__text">
@@ -98,6 +99,8 @@ const Home = () => {
           <div className="about__img">
             <img src="/assets/img/about-img1.PNG" alt="equipements" />
             <img src="/assets/img/about-img2.PNG" alt="equipements" />
+            <img src="/assets/img/dos.jpg" alt="equipements" />
+            <Button />
           </div>
 
           <div className="about__team">

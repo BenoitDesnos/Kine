@@ -99,3 +99,31 @@
         opacity: 0;
     }
 }
+
+.scroll-bottom {
+    .arrow {
+        display: block;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        font-size: 3rem;
+        background-color: rgba(0, 0, 0, 0.658);
+        transition: 0.25s;
+        user-select: none;
+        padding: 0 14px;
+        z-index: 1;
+
+
+        &:hover {
+            font-size: 3.5rem;
+        }
+    }
+
+    .left {
+        left: 15px;
+    }
+
+    .right {
+        right: -24px;
+    }
+}

@@ -1,7 +1,9 @@
 .scroll {
+    display: flex;
     max-width: 550px;
     position: relative;
     margin: auto;
+    z-index: 0;
 
     .arrow {
         display: block;
@@ -60,18 +62,23 @@
     overflow-y: visible;
     overflow-x: hidden;
     position: relative;
-    z-index: 0;
+    z-index: 2;
+
     border-radius: 20px;
     transition: 0.3s;
 
     box-sizing: content-box;
 
-    &:hover {
-        transform: scale(1.5);
-        z-index: 5;
-        transition: 0.3s;
-    }
 
+
+    .cover-first-click {
+        position: absolute;
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        cursor: pointer;
+    }
 
     img {
         position: relative;

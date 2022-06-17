@@ -1,7 +1,8 @@
 import React from "react";
 import Navigation from "./../components/Navigation";
 import { motion } from "framer-motion";
-import Button from "../components/Button";
+
+import Carroussel from "../components/Carroussel";
 
 const Home = () => {
   const variants = {
@@ -32,7 +33,7 @@ const Home = () => {
         <Navigation />
 
         <div className="home-main">
-          <section id="section10" class="demo">
+          <section id="section10" className="demo">
             <a href="#about" id="about">
               <span></span>Scroll
             </a>
@@ -95,12 +96,8 @@ const Home = () => {
               </p>
             </div>
           </div>
-
-          <div className="about__img">
-            <img src="/assets/img/about-img1.PNG" alt="equipements" />
-            <img src="/assets/img/about-img2.PNG" alt="equipements" />
-            <img src="/assets/img/dos.jpg" alt="equipements" />
-            <Button />
+          <div className="about__carroussel">
+            <Carroussel />
           </div>
 
           <div className="about__team">

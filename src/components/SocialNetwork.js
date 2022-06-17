@@ -25,7 +25,7 @@ const SocialNetwork = () => {
           onMouseOver={anim}
         >
           <li>
-            <i class="fa-solid fa-phone"></i>
+            <i className="fa-solid fa-phone"></i>
           </li>
         </a>
         <a
@@ -36,7 +36,7 @@ const SocialNetwork = () => {
           onMouseOver={anim}
         >
           <li>
-            <i class="fa-solid fa-location-dot"></i>
+            <i className="fa-solid fa-location-dot"></i>
           </li>
         </a>
         <a

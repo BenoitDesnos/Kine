@@ -126,12 +126,13 @@ const Carroussel = () => {
 
   return (
     <>
+      <h2 className="title-carroussel">Nos locaux.</h2>
       <div className="about__img">
         <div className="cover-first-click"></div>
         <img src="/assets/img/about-img1.PNG" alt="equipements" />
         <img src="/assets/img/about-img2.PNG" alt="equipements" />
-        <img src="/assets/img/dos.jpg" alt="equipements" />
-        <img src="/assets/img/about-img2.PNG" alt="equipements" />
+        <img src="/assets/img/about-img3.PNG" alt="equipements" />
+        <img src="/assets/img/about-img4.PNG" alt="equipements" />
       </div>
       <div className="scroll">
         <div className="arrow left">

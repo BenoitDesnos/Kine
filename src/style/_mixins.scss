@@ -4,7 +4,7 @@
     background: $color-4;
     position: absolute;
     border-radius: 10px;
-    bottom: 7px;
+    bottom: 8px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -65,4 +65,12 @@
             transition-delay: 0s, $duration, $duration*2;
         }
     }
+}
+
+@mixin decorations {
+
+    content: "";
+    position: absolute;
+    top: 50%;
+    z-index: 1;
 }

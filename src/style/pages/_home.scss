@@ -11,9 +11,83 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    flex-direction: column;
+}
 
+.title-container {
+    padding-top: 200px;
+
+    h1,
+    .under-title {
+        color: $color-1;
+        text-align: center;
+
+    }
+
+
+
+    .under-title {
+        color: $color-5;
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+.more-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 175px;
+    height: 50px;
+    background-color: transparent;
+    margin-top: 100px;
+    border: $color-5 solid 2px;
+    border-radius: 25px;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        border: $color-4 solid 2px;
+        transition: all 0.3s;
+
+        .button-container {
+            transform: translateX(118px);
+            transition: all 0.3s;
+            background-color: $color-5;
+
+            i {
+                color: $color-4;
+            }
+        }
+
+        span {
+            transform: translateX(-55px);
+            transition: all 0.3s;
+
+        }
+    }
+
+    span {
+        transform: translateX(0px);
+        transition: all 0.3s;
+        padding-right: 5px;
+    }
+
+    .button-container {
+        background-color: $color-4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        transform: translateX(-8px);
+        transition: all 0.3s;
+    }
 
 }
+
 
 .about {
     display: flex;
@@ -25,6 +99,20 @@
     position: relative;
     text-align: justify;
     border-top: black dashed 2px;
+
+    &::before {
+        content: "À PROPOS";
+        font-size: 10rem;
+        font-weight: 900;
+        position: absolute;
+        text-align: center;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        color: lighten($color-1, 3%);
+        width: 100%;
+    }
 
     &__presentation {
         padding-top: $item-tp;
@@ -55,7 +143,33 @@
         flex: 2;
 
         h2 {
-            padding-top: $title-tp;
+            margin-top: $title-tm;
+            display: inline-block;
+            position: relative;
+
+            &::before {
+
+                @include decorations;
+                right: -3050px;
+                width: 3000px;
+                height: 1px;
+                background: $color-5;
+                transform: translateY(-50%);
+                box-sizing: border-box;
+            }
+
+            &::after {
+                @include decorations;
+                right: -50px;
+                width: 10px;
+                height: 10px;
+                background: $color-2;
+                border-radius: 50%;
+                margin-top: -5px;
+                transform: translateY(-50%);
+                bottom: -30px;
+                transform: none;
+            }
         }
 
         p {
@@ -72,19 +186,74 @@
     }
 
 
-
-
-
     &__team {
+
+
+        width: 100%;
+        background-color: $color-2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        h2 {
+            z-index: 2;
+            margin-top: $item-tm;
+            margin-bottom: $title-bm;
+            position: relative;
+
+            &::before {
+
+                @include decorations;
+                right: -3050px;
+                width: 3000px;
+                height: 1px;
+                background: $color-5;
+                transform: translateY(-50%);
+                box-sizing: border-box;
+            }
+
+            &::after {
+                @include decorations;
+                right: -50px;
+                width: 10px;
+                height: 10px;
+                background: $color-1;
+                border-radius: 50%;
+                margin-top: -5px;
+                transform: translateY(-50%);
+                bottom: -30px;
+                transform: none;
+            }
+
+        }
+    }
+
+
+    .cards__container {
+
+
         background-color: $color-2;
         display: flex;
         flex-flow: row wrap;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         width: 100%;
-        padding-top: $item-tp;
+
         padding-bottom: $item-bp;
+
+        &::before {
+            content: "TEAM";
+            font-size: 10rem;
+            position: absolute;
+            top: 0%;
+            left: 35%;
+            transform: translateX(-50%);
+            z-index: 0;
+            color: lighten($color-2, 3%);
+        }
 
         .person__presentation {
             display: flex;

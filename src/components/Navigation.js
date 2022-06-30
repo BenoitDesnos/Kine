@@ -6,18 +6,30 @@ const Navigation = () => {
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
       if (window.scrollY > 20) {
-        document.querySelector(
-          "#root > div > div > div.navigation"
-        ).style.backgroundColor = "#191F22";
+        document
+          .querySelector("#root > div > div > header.navigation")
+          .classList.add("navigation--scrolled");
+        document
+          .querySelector("#root > div > div > header > div.social-network")
+          .classList.add("social-network--scrolled");
+        document
+          .querySelector("#root > div > div > header > div.main-logo")
+          .classList.add("main-logo--scrolled");
       } else {
-        document.querySelector(
-          "#root > div > div > div.navigation"
-        ).style.backgroundColor = "transparent";
+        document
+          .querySelector("#root > div > div > header.navigation")
+          .classList.remove("navigation--scrolled");
+        document
+          .querySelector("#root > div > div > header > div.social-network")
+          .classList.remove("social-network--scrolled");
+        document
+          .querySelector("#root > div > div > header > div.main-logo")
+          .classList.remove("main-logo--scrolled");
       }
     });
   }, []);
   return (
-    <div className="navigation">
+    <header className="navigation">
       <SocialNetwork />
       <ul>
         <NavLink
@@ -51,7 +63,7 @@ const Navigation = () => {
       <div className="main-logo">
         <img src="./assets/img/logo.svg" alt="logo" />
       </div>
-    </div>
+    </header>
   );
 };
 

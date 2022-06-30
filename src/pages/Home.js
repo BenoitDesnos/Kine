@@ -33,6 +33,16 @@ const Home = () => {
         <Navigation />
 
         <div className="home-main">
+          <div className="title-container">
+            <h1>TERRAMED</h1>
+            <p className="under-title">"Terre de thérapie sportive"</p>
+          </div>
+          <div className="more-button">
+            <div className="button-container">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <span>En savoir plus</span>
+          </div>
           <section id="section10" className="demo">
             <a href="#about" id="about">
               <span></span>Scroll
@@ -46,7 +56,7 @@ const Home = () => {
             </div>
             <div className="about__text">
               <h2>
-                W.E.L.L / Cabinet de kinésithérapie à Thuïr, pyrénnées
+                TerraMed / Cabinet de kinésithérapie à Thuïr, pyrénnées
                 orientales.
               </h2>
               <p>
@@ -101,32 +111,38 @@ const Home = () => {
           </div>
 
           <div className="about__team">
-            <div className="person__presentation">
-              <img src="./assets/img/person1.jpg" alt="employee" />
-              <h3>Nom Prénom</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                quod impedit ipsam quam, accusamus illum asperiores quis aliquam
-                ipsum natus praesentium dolorem exercitationem ab neque!
-              </p>
-            </div>
-            <div className="person__presentation">
-              <img src="./assets/img/person2.jpg" alt="employee" />
-              <h3>Nom Prénom</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                quod impedit ipsam quam, accusamus illum asperiores quis aliquam
-                ipsum natus praesentium dolorem exercitationem ab neque!
-              </p>
-            </div>
-            <div className="person__presentation">
-              <img src="./assets/img/person3.jpg" alt="employee" />
-              <h3>Nom Prénom</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                quod impedit ipsam quam, accusamus illum asperiores quis aliquam
-                ipsum natus praesentium dolorem exercitationem ab neque!
-              </p>
+            <h2>Notre équipe.</h2>
+            <div className="cards__container">
+              <div className="person__presentation">
+                <img src="./assets/img/person1.jpg" alt="employee" />
+                <h3>Nom Prénom</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                  quod impedit ipsam quam, accusamus illum asperiores quis
+                  aliquam ipsum natus praesentium dolorem exercitationem ab
+                  neque!
+                </p>
+              </div>
+              <div className="person__presentation">
+                <img src="./assets/img/person2.jpg" alt="employee" />
+                <h3>Nom Prénom</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                  quod impedit ipsam quam, accusamus illum asperiores quis
+                  aliquam ipsum natus praesentium dolorem exercitationem ab
+                  neque!
+                </p>
+              </div>
+              <div className="person__presentation">
+                <img src="./assets/img/person3.jpg" alt="employee" />
+                <h3>Nom Prénom</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                  quod impedit ipsam quam, accusamus illum asperiores quis
+                  aliquam ipsum natus praesentium dolorem exercitationem ab
+                  neque!
+                </p>
+              </div>
             </div>
           </div>
         </div>

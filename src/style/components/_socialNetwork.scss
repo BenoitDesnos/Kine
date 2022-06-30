@@ -6,6 +6,24 @@
     z-index: 1;
 
 
+    &.social-network--scrolled {
+
+
+        ul {
+
+            height: 80px;
+
+            transform: translate(50px, 10px) rotate(-90deg);
+            transition: all 0.3s;
+
+
+            li {
+                transform: rotate(90deg);
+                transition: all 0.3s;
+            }
+        }
+    }
+
     @media screen and (max-width: 650px) {
         width: 30%;
     }
@@ -17,9 +35,14 @@
         min-width: 100px;
         height: 135px;
         justify-content: space-evenly;
+        transition: all 0.3s;
 
         @media screen and (max-width: 450px) {
             min-width: 100%;
+        }
+
+        li {
+            transition: all 0.3s;
         }
 
         a {

@@ -3,6 +3,7 @@ import Navigation from "./../components/Navigation";
 import { motion } from "framer-motion";
 
 import Carroussel from "../components/Carroussel";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const variants = {
@@ -44,10 +45,11 @@ const Home = () => {
             <span>En savoir plus</span>
           </div>
           <section id="section10" className="demo">
-            <a href="#about" id="about">
+            <a href="#about">
               <span></span>Scroll
             </a>
           </section>
+          <div id="about"></div>
         </div>
         <div className="about">
           <div className="about__presentation">
@@ -146,6 +148,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <Footer />
       </motion.div>
     </div>
   );

@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer__top">
           <h3>PRENEZ RENDEZ-VOUS</h3>
           <a
-            href="04 68 09 29 75"
+            href="tel:04 68 09 29 75"
             target="_blank"
             rel="noopener noreferrer"
             className="hover-socials"

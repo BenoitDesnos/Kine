@@ -12,6 +12,30 @@ $font-1: "font-1",
 sans-serif;
 $font-2: "font-2",
 serif;
+
+//width carroussel
+$big-width: 550px;
+$lil-width: 300px;
+//height carroussel
+$big-height: 413px;
+$lil-height: 225px;
+
+
+// gaps
+$gap-divs: 50px;
+$gap-title: 30px;
+$small-gap: 10px;
+//maps
+$font-size: (basic: 1.5rem,
+    title1: 4rem,
+    title2: 1.7rem,
+    title3: 1.5rem,
+    title4: 1.4rem,
+    paragraph: 1rem,
+);
+$breakpoints: (mobile: 700px,
+    tablet: 1024px,
+);
 /*  -------------------- colors ---------------------- */
 $color-2: #191F22;
 $color-1: #9a402f;

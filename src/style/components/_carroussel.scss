@@ -2,16 +2,18 @@
     width: 100%;
     height: auto;
     position: relative;
+    z-index: 2;
 
     &::before {
         content: "TERRA";
-        max-width: 8rem;
+        max-width: 6rem;
         word-wrap: break-word;
         text-align: center;
-        font-size: 8rem;
+        font-size: 6rem;
+        font-weight: 900;
         position: absolute;
         transform-origin: center;
-        top: 50%;
+        bottom: -439px;
         left: 80%;
         transform: translate(-50%, -50%);
         z-index: 0;
@@ -20,16 +22,27 @@
 
     &::after {
         content: "MED";
-        max-width: 10rem;
+        max-width: 6rem;
         word-wrap: break-word;
         text-align: center;
-        font-size: 8rem;
+        font-size: 6rem;
+        font-weight: 900;
         position: absolute;
-        top: 50%;
+        bottom: -303px;
         left: 90%;
         transform: translate(-50%, -50%);
         z-index: 0;
         color: lighten($color-1, 3%);
+    }
+
+    @media screen and (max-width: 1100px) {
+        &::before {
+            bottom: -500px;
+        }
+
+        &::after {
+            bottom: -26px;
+        }
     }
 
 }
@@ -38,9 +51,11 @@
 
 
     display: block;
-    width: 550px;
+    width: $big-width;
     margin: $item-tm auto 0 auto;
     position: relative;
+
+
 
     &::before {
 
@@ -69,10 +84,15 @@
 
 .scroll {
     display: flex;
-    max-width: 550px;
+    max-width: $big-width;
     position: relative;
     margin: auto;
     z-index: 1;
+
+    @media screen and (max-width: 700px) {
+        width: $lil-width;
+
+    }
 
     .arrow {
         display: block;
@@ -117,62 +137,96 @@
 }
 
 .about__img {
-
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    max-width: 550px;
-    min-width: 350px;
-    height: auto;
-    margin-top: $item-tm;
-    margin-bottom: $item-bm;
-    margin-left: auto;
-    margin-right: auto;
+
+    width: 100%;
+    height: $big-height;
+    max-width: $big-width;
+
+    margin: $item-tm auto $item-bm auto;
     overflow-y: visible;
     overflow-x: hidden;
     position: relative;
     z-index: 2;
-
     border-radius: 20px;
-    transition: 0.3s;
-
+    transition: transform 0.3s;
     box-sizing: content-box;
+    position: relative;
 
-
+    @media screen and (max-width: 700px) {
+        width: $lil-width;
+        height: $lil-height;
+    }
 
     .cover-first-click {
+
         position: absolute;
         background-color: transparent;
         width: 100%;
         height: 100%;
-        z-index: 1;
+        z-index: 5;
         cursor: pointer;
+        background-color: #cc7b2441;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+
+
+        span {
+            margin-bottom: 10%;
+            color: $color-2;
+            font-size: 1.5rem;
+            font-weight: 900;
+            max-width: 450px;
+            text-align: center;
+
+            @media screen and (max-width: 700px) {
+                font-size: map-get($font-size, paragraph);
+            }
+        }
     }
 
     img {
         position: relative;
         flex: 1 0;
-        width: 100%;
+        width: $big-width;
+        height: $big-height;
+        object-fit: cover;
         transform: translateX(0px);
-
         border-radius: 20px;
-
+        z-index: 3;
         border: $color-4 solid 2px;
         cursor: pointer;
+
+        @media screen and (max-width: 700px) {
+            width: $lil-width;
+            height: $lil-height;
+        }
+
 
 
 
     }
 }
 
+
+
 .dots {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
+
+    width: $big-width;
     z-index: 1;
     margin-bottom: $item-bm;
     transform: translateY(-50%);
+
+    @media screen and (max-width: 700px) {
+        width: $lil-width;
+
+    }
 
 
 
@@ -189,4 +243,57 @@
             background-color: $color-4;
         }
     }
+}
+
+
+
+@media screen and (max-width: 1100px) {
+
+
+    .title-carroussel {
+
+
+
+        display: block;
+        width: $big-width;
+        margin: $item-tm auto 0 auto;
+        position: relative;
+
+        &::before {
+
+            @include decorations;
+            left: 0%;
+            width: 1100px;
+
+        }
+
+        &::after {
+            @include decorations;
+            left: 0%;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .title-carroussel {
+
+        width: $lil-width;
+
+    }
+
+    .about__img,
+    .scroll,
+    .dots {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about__carroussel::before,
+    .about__carroussel::after {
+        font-size: 1rem;
+    }
+
+
 }

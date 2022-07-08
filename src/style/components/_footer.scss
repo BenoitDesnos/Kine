@@ -3,11 +3,12 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     .footer__top {
         flex-direction: column;
         background-image: url(./../../../public/assets/img/pexels-li-sun-371049.jpg);
-        background-size: 100%;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         height: 500px;
@@ -17,13 +18,19 @@ footer {
         h2 {
             font-size: 3rem;
             font-weight: 100;
+
+
+
         }
+
+
 
         a {
             font-size: 3rem;
             font-weight: bolder;
             padding-top: $item-tp;
             transition: 0.3s;
+
 
             &:hover {
                 color: $color-4;
@@ -43,11 +50,21 @@ footer {
             transition: 0.3s;
         }
 
+        @media screen and (max-width: 700px) {
+
+            a,
+            i {
+
+                font-size: 1.5rem;
+            }
+        }
+
     }
 
     .footer__bottom {
-        height: 300px;
+        min-height: 300px;
         align-items: center;
+        background-color: $color-2;
     }
 
     .footer__top,
@@ -64,12 +81,27 @@ footer {
             width: 100%;
             height: 100%;
             display: flex;
+            flex-wrap: wrap;
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
             background-color: $color-2;
 
+            >* {
+                margin: 20px;
+            }
 
+            @media screen and(max-width: 700px) {
+                flex-direction: column-reverse;
+                flex-wrap: nowrap;
+                align-items: flex-start;
+                width: auto;
+                margin: auto;
+
+                >* {
+                    margin: 20px;
+                }
+            }
         }
 
         .social-network {
@@ -77,6 +109,8 @@ footer {
             flex-direction: row;
             position: relative;
             left: 0px;
+            width: auto;
+
 
             ul {
                 flex-direction: row;
@@ -104,6 +138,10 @@ footer {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            @media screen and (max-width: 700px) {
+                align-items: flex-start;
+            }
 
             .ratings {
                 border: $color-4 solid 2px;

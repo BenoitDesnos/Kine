@@ -4,6 +4,17 @@ import SocialNetwork from "./SocialNetwork";
 
 const Navigation = () => {
   useEffect(() => {
+    const hamburger = document.querySelector(".hamburger");
+    const navigation = document.querySelector(".navigation");
+    const menu = document.querySelector(".navigation > ul");
+
+    hamburger.addEventListener("click", () => {
+      navigation.classList.toggle("navigation--clicked");
+      menu.classList.toggle("menu--clicked");
+      document.body.classList.toggle("noscroll");
+      hamburger.classList.toggle("is-active");
+    });
+
     window.addEventListener("scroll", (e) => {
       if (window.scrollY > 20) {
         document
@@ -30,6 +41,11 @@ const Navigation = () => {
   }, []);
   return (
     <header className="navigation">
+      <div className="hamburger ">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <SocialNetwork />
       <ul>
         <NavLink

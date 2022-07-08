@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <footer>
         <div className="footer__top">
-          <h2>PRENEZ RENDEZ-VOUS</h2>
+          <h3>PRENEZ RENDEZ-VOUS</h3>
           <a
             href="04 68 09 29 75"
             target="_blank"

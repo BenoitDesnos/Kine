@@ -5,6 +5,7 @@
     background-position-y: center;
     background-attachment: scroll;
     background-repeat: repeat-y;
+
     width: 100%;
     height: 100vh;
     display: flex;
@@ -103,6 +104,7 @@
     position: relative;
     text-align: justify;
     border-top: black dashed 2px;
+    overflow: hidden;
 
     &::before {
         content: "À PROPOS";
@@ -133,6 +135,12 @@
             }
         }
 
+        @media screen and (max-width: 1100px) {
+            &__img {
+                display: none;
+            }
+        }
+
         .about__img {
             flex: 1;
             padding-top: 0;
@@ -150,6 +158,8 @@
             margin-top: $title-tm;
             display: inline-block;
             position: relative;
+
+
 
             &::before {
 
@@ -207,6 +217,8 @@
             margin-bottom: $title-bm;
             position: relative;
 
+
+
             &::before {
 
                 @include decorations;
@@ -247,6 +259,11 @@
         width: 100%;
 
         padding-bottom: $item-bp;
+        padding-top: $item-tp;
+        overflow: hidden;
+
+
+
 
         &::before {
             content: "TEAM";
@@ -264,8 +281,10 @@
             flex-direction: column;
             text-align: center;
             max-width: 300px;
-            max-height: 460px;
+            max-height: 470px;
+            margin: 20px auto 20px auto;
             @include magic-border-hover(2px, $color-4, 0.3s, 1);
+
 
             &:not(:hover) {
                 h3::after {
@@ -310,6 +329,7 @@
                 }
 
                 img {
+
                     opacity: 0.5;
                     transition: opacity 0.5s;
 
@@ -380,4 +400,88 @@
 
         }
     }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .about__img,
+    .scroll,
+    .dots {
+        margin-left: 5%;
+    }
+
+    .about__carroussel::before {
+        left: 82%;
+
+    }
+
+    .about__carroussel::after {
+        left: 95%;
+
+        max-width: 7rem;
+    }
+
+    .about {
+
+        ::after,
+        ::before,
+        &::after,
+        &::before {
+            font-size: 7rem;
+        }
+    }
+
+    .about .about__text,
+    .about .about__team {
+        flex: 2;
+
+        h2 {
+            &::before {
+                @include decorations;
+                right: 0%;
+                width: 1000px;
+            }
+
+            &::after {
+                @include decorations;
+                right: 0px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .about__team {
+
+        ::after,
+        ::before,
+        &::after,
+        &::before {
+            font-size: 3rem;
+        }
+    }
+
+    .about .cards__container {
+        &::before {
+            font-size: 8rem;
+        }
+    }
+
+    .about__img,
+    .scroll,
+    .dots {
+        margin-left: auto;
+    }
+
+    .about__carroussel::before,
+    .about__carroussel::after {
+        display: none;
+
+    }
+
+    .title-container .under-title {
+        font-size: map-get($font-size, title4);
+    }
+
+
 }

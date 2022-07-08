@@ -404,6 +404,7 @@
 
 @media screen and (max-width: 1100px) {
 
+
     .about__img,
     .scroll,
     .dots {
@@ -451,6 +452,13 @@
 }
 
 @media screen and (max-width: 700px) {
+
+    .about .cards__container .person__presentation {
+
+        max-width: 250px;
+        max-height: 400px;
+    }
+
     .about {
 
         ::after,

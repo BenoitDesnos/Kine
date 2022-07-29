@@ -2,7 +2,6 @@ import React from "react";
 import Navigation from "./../components/Navigation";
 import ContactForm from "./../components/ContactForm";
 import CopyToClipboard from "react-copy-to-clipboard";
-import SocialNetwork from "../components/SocialNetwork";
 import { motion } from "framer-motion";
 import Footer from "./../components/Footer";
 

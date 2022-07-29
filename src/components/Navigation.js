@@ -7,6 +7,8 @@ const Navigation = () => {
     const hamburger = document.querySelector(".hamburger");
     const navigation = document.querySelector(".navigation");
     const menu = document.querySelector(".navigation > ul");
+    const navLink = document.querySelectorAll(".hover");
+    console.log(navLink);
 
     hamburger.addEventListener("click", () => {
       navigation.classList.toggle("navigation--clicked");
@@ -14,27 +16,35 @@ const Navigation = () => {
       document.body.classList.toggle("noscroll");
       hamburger.classList.toggle("is-active");
     });
+    navLink.forEach((link) => {
+      link.addEventListener("click", () => {
+        navigation.classList.toggle("navigation--clicked");
+        menu.classList.toggle("menu--clicked");
+        document.body.classList.toggle("noscroll");
+        hamburger.classList.toggle("is-active");
+      });
+    });
 
     window.addEventListener("scroll", (e) => {
       if (window.scrollY > 20) {
         document
-          .querySelector("#root > div > div > header.navigation")
+          .querySelector(".navigation")
           .classList.add("navigation--scrolled");
         document
-          .querySelector("#root > div > div > header > div.social-network")
+          .querySelector(".social-network")
           .classList.add("social-network--scrolled");
         document
-          .querySelector("#root > div > div > header > div.main-logo")
+          .querySelector(".main-logo")
           .classList.add("main-logo--scrolled");
       } else {
         document
-          .querySelector("#root > div > div > header.navigation")
+          .querySelector(".navigation")
           .classList.remove("navigation--scrolled");
         document
-          .querySelector("#root > div > div > header > div.social-network")
+          .querySelector(".social-network")
           .classList.remove("social-network--scrolled");
         document
-          .querySelector("#root > div > div > header > div.main-logo")
+          .querySelector(".main-logo")
           .classList.remove("main-logo--scrolled");
       }
     });
@@ -73,7 +83,7 @@ const Navigation = () => {
           to="/contact"
           className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
         >
-          <li>contact</li>
+          <li>Contact</li>
         </NavLink>
       </ul>
       <div className="main-logo">

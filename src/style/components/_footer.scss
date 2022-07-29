@@ -5,6 +5,8 @@ footer {
     align-items: center;
     overflow: hidden;
 
+
+
     .footer__top {
         flex-direction: column;
         background-image: url(./../../../public/assets/img/pexels-li-sun-371049.jpg);
@@ -14,6 +16,7 @@ footer {
         height: 500px;
         align-items: flex-start;
         padding-left: 10%;
+        z-index: 2;
 
         h2 {
             font-size: 3rem;
@@ -65,6 +68,7 @@ footer {
         min-height: 300px;
         align-items: center;
         background-color: $color-2;
+        z-index: 1;
     }
 
     .footer__top,

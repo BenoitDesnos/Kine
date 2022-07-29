@@ -16,7 +16,7 @@ const SocialNetwork = () => {
   };
   return (
     <div className="social-network">
-      <ul className="content">
+      <ul className="content content-row">
         <a
           href="https://www.facebook.com"
           target="_blank"

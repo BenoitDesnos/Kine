@@ -14,7 +14,7 @@ const ContactForm = () => {
         "service_mbshy4c",
         "template_nv3uodn",
         form.current,
-        process.env.REACT_APP_ID
+        "7rq8AL2AY9SpbZ6pX"
       )
       .then(
         (result) => {

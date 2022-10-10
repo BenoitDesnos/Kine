@@ -40,7 +40,7 @@ const SocialNetwork = () => {
           </li>
         </a>
         <a
-          href="https://www.google.com/search?q=kin%C3%A9%20thuir&oq=kin%C3%A9+thuir&aqs=chrome..69i57j0i22i30l3j69i60l4.1800j0j7&sourceid=chrome&ie=UTF-8&tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=ALiCzsbWZZaHjpp0dz8sJUP7Eupw39qNdA:1656665351499&rflfq=1&num=10&rldimm=2157528383672936275&lqi=CgtraW7DqSB0aHVpcloTIgtraW7DqSB0aHVpcioECAMQAJIBD3BoeXNpb3RoZXJhcGlzdJoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VOcE1rbDJVVEJSUlJBQqoBDRABKgkiBWtpbsOpKAQ&ved=2ahUKEwjgmqaup9f4AhXfgc4BHUaMC4cQvS56BAgLEAE&sa=X&rlst=f#rlfi=hd:;si:2157528383672936275,l,CgtraW7DqSB0aHVpcloTIgtraW7DqSB0aHVpcioECAMQAJIBD3BoeXNpb3RoZXJhcGlzdJoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VOcE1rbDJVVEJSUlJBQqoBDRABKgkiBWtpbsOpKAQ;mv:[[42.64279358323054,2.7789334883789696],[42.63636913198091,2.762840234289614]]"
+          href="https://www.google.com/search?q=kine%20thuir&oq=kine+thuir&aqs=chrome..69i57j0i20i263i512l2j46i175i199i512j0i512j0i22i30l5.1359j1j9&sourceid=chrome&ie=UTF-8&tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=ALiCzsZ5BjZOLRu9Yf-5b6lOjKXeiZyH2A:1665434794360&rflfq=1&num=10&rldimm=2157528383672936275&lqi=CgpraW5lIHRodWlyWhIiCmtpbmUgdGh1aXIqBAgDEACSAQ9waHlzaW90aGVyYXBpc3SaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUTJkSFYxTmpCQlJSQUKqAQwQASoIIgRraW5lKAQ&ved=2ahUKEwj8v8GKxNb6AhVMgRoKHSdMCQ8QvS56BAgVEAE&sa=X&rlst=f#rlfi=hd:;si:2157528383672936275,l,CgpraW5lIHRodWlyWhIiCmtpbmUgdGh1aXIqBAgDEACSAQ9waHlzaW90aGVyYXBpc3SaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUTJkSFYxTmpCQlJSQUKqAQwQASoIIgRraW5lKAQ;mv:[[42.684904499999995,2.8158738],[42.6139942,2.7461203000000003]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:2"
           target="_blank"
           rel="noopener noreferrer"
           className="hover-socials"

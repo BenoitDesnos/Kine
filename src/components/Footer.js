@@ -40,7 +40,7 @@ const Footer = () => {
               className="access"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.google.com/maps/dir/43.6007954,3.8757129/DUPIAT+Vincent,+DE+BEAULIEU+Marie,+VIDAL+Romain+KIN%C3%89+SPORT+PRO+Thuir,+Rond+point+les+Espassoles,+Rte+de+Perpignan+B%C3%A2timent+B,+66300+Thuir/@43.1204242,2.7701617,9z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x12b00d2cd0b1a63b:0x1df114a245a5e753!2m2!1d2.7685574!2d42.641856"
+              href="https://www.google.com/search?q=kine%20thuir&oq=kine+thuir&aqs=chrome..69i57j0i20i263i512l2j46i175i199i512j0i512j0i22i30l5.1359j1j9&sourceid=chrome&ie=UTF-8&tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=ALiCzsZ5BjZOLRu9Yf-5b6lOjKXeiZyH2A:1665434794360&rflfq=1&num=10&rldimm=2157528383672936275&lqi=CgpraW5lIHRodWlyWhIiCmtpbmUgdGh1aXIqBAgDEACSAQ9waHlzaW90aGVyYXBpc3SaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUTJkSFYxTmpCQlJSQUKqAQwQASoIIgRraW5lKAQ&ved=2ahUKEwj8v8GKxNb6AhVMgRoKHSdMCQ8QvS56BAgVEAE&sa=X&rlst=f#rlfi=hd:;si:2157528383672936275,l,CgpraW5lIHRodWlyWhIiCmtpbmUgdGh1aXIqBAgDEACSAQ9waHlzaW90aGVyYXBpc3SaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUTJkSFYxTmpCQlJSQUKqAQwQASoIIgRraW5lKAQ;mv:[[42.684904499999995,2.8158738],[42.6139942,2.7461203000000003]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:2"
             >
               <i class="fa-solid fa-location-dot"></i>
               <p>Plan d'accès</p>

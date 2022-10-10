@@ -1,6 +1,6 @@
 // props from Lodging.js
 function Carrousel({ setClickCount, clickCount, picturesArray }) {
-  // if more than one pciture return carrousel
+  // if more than one pciture return carrousell
   return picturesArray.length > 1 ? (
     <div className="about__carrousel">
       <h2 className="carrousel__title">

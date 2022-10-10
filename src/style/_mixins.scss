@@ -78,3 +78,12 @@
         top: -25px;
     }
 }
+
+@mixin carrouselClicks {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 70px;
+    color: $color-2;
+    transform: translateY(-50%)
+}

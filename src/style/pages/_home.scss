@@ -427,15 +427,7 @@
         max-width: 7rem;
     }
 
-    .about {
 
-        ::after,
-        ::before,
-        &::after,
-        &::before {
-            font-size: 7rem;
-        }
-    }
 
     .about .about__text,
     .about .about__team {

@@ -2,10 +2,18 @@ import React from "react";
 import Navigation from "./../components/Navigation";
 import { motion } from "framer-motion";
 
-import Carroussel from "../components/Carroussel";
+import Carrousel from "../components/Carrousel";
 import Footer from "../components/Footer";
+import { useState, useEffect } from "react";
+import Pictures from "../data/pictures.json";
 
 const Home = () => {
+  const [clickCount, setClickCount] = useState(0);
+  const [picturesArray, setPicturesArray] = useState([]);
+  useEffect(() => {
+    setPicturesArray(Pictures[0].pictures);
+  }, []);
+
   const variants = {
     initial: {
       opacity: 0,
@@ -108,9 +116,12 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="about__carroussel">
-            <Carroussel />
-          </div>
+
+          <Carrousel
+            clickCount={clickCount}
+            picturesArray={picturesArray}
+            setClickCount={setClickCount}
+          />
 
           <div className="about__team">
             <h2>Notre équipe.</h2>

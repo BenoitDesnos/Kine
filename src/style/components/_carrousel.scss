@@ -9,7 +9,7 @@
         position: absolute;
         z-index: -1;
         color: lighten($color-1, 3%);
-        width: 200%;
+        width: 2000px;
     }
 
     .carrousel__title {
@@ -89,9 +89,17 @@
 
 @media screen and (max-width: map-get($breakpoints, tablet)) {
     .about__carrousel {
+        &::before {
+            font-size: 9rem;
+            top: 65px;
+            left: -170px;
+            font-weight: 700;
+        }
 
         .carrousel {
             height: 350px;
+            margin-top: $medium-gap;
+            margin-bottom: $medium-gap;
 
             #leftClick,
             #rightClick {
@@ -125,13 +133,42 @@
 
 @media screen and (max-width: map-get($breakpoints, mobile)) {
     .about__carrousel {
+        width: 85%;
+
+        &::before {
+            top: 65px;
+            left: -25px;
+            font-size: 5rem;
+            font-weight: 900;
+
+        }
 
         .carrousel {
             height: 250px;
 
+            #leftClick {
+                @include carrouselClicks;
+                left: $medium-gap *0.3;
+
+
+            }
+
+            #rightClick {
+                @include carrouselClicks;
+                right: $medium-gap *0.3;
+
+
+            }
+
             #leftClick,
             #rightClick {
-                font-size: 36px;
+                font-size: 45px;
+            }
+
+
+            .picture__order {
+                bottom: $medium-gap *0.3;
+
             }
         }
 

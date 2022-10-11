@@ -6,6 +6,7 @@ import Carrousel from "../components/Carrousel";
 import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 import Pictures from "../data/pictures.json";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   const [clickCount, setClickCount] = useState(0);
@@ -46,12 +47,13 @@ const Home = () => {
             <h1>TERRAMED</h1>
             <p className="under-title">"Terre de thérapie sportive"</p>
           </div>
-          <div className="more-button">
+
+          <NavLink to="/contact" className="more-button">
             <div className="button-container">
-              <i class="fa-solid fa-plus"></i>
+              <i className="fa-solid fa-phone"></i>
             </div>
-            <span>En savoir plus</span>
-          </div>
+            <span>Joignez-nous !</span>
+          </NavLink>
           <section id="section10" className="demo">
             <a href="#about">
               <span></span>Scroll

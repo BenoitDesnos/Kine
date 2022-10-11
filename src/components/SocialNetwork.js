@@ -25,7 +25,7 @@ const SocialNetwork = () => {
           onMouseOver={anim}
         >
           <li>
-            <i class="fa-brands fa-facebook-f"></i>
+            <i className="fa-brands fa-facebook-f"></i>
           </li>
         </a>
         <a
@@ -47,7 +47,7 @@ const SocialNetwork = () => {
           onMouseOver={anim}
         >
           <li>
-            <i class="fa-brands fa-google"></i>
+            <i className="fa-brands fa-google"></i>
           </li>
         </a>
       </ul>

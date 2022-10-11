@@ -17,7 +17,7 @@ function Carrousel({ setClickCount, clickCount, picturesArray }) {
               ? setClickCount(picturesArray.length - 1)
               : setClickCount(clickCount - 1);
           }}
-          class="fa-solid fa-caret-left"
+          className="fa-solid fa-caret-left"
         ></i>
 
         <img
@@ -32,7 +32,7 @@ function Carrousel({ setClickCount, clickCount, picturesArray }) {
               ? setClickCount(0)
               : setClickCount(clickCount + 1);
           }}
-          class="fa-solid fa-caret-right"
+          className="fa-solid fa-caret-right"
         ></i>
       </div>
     </div>

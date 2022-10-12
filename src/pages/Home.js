@@ -7,6 +7,9 @@ import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 import Pictures from "../data/pictures.json";
 import { NavLink } from "react-router-dom";
+import Article from "../components/Article";
+import ScrollDown from "./../components/ScrollDown";
+import staff from "../data/staff.json";
 
 const Home = () => {
   const [clickCount, setClickCount] = useState(0);
@@ -31,6 +34,7 @@ const Home = () => {
       x: -100,
     },
   };
+
   return (
     <div>
       <motion.div
@@ -54,69 +58,14 @@ const Home = () => {
             </div>
             <span>Joignez-nous !</span>
           </NavLink>
-          <section id="section10" className="demo">
-            <a href="#about">
-              <span></span>Scroll
-            </a>
-          </section>
-          <div id="about"></div>
+          <ScrollDown />
         </div>
         <div className="about">
           <div className="about__presentation">
             <div className="about__presentation__img">
               <img src="./assets/img/bike.svg" alt="" />
             </div>
-            <div className="about__text">
-              <h2>
-                TerraMed / Cabinet de kinésithérapie à Thuïr, pyrénnées
-                orientales.
-              </h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet
-                maxime, asperiores alias voluptates sunt distinctio. Eius id
-                cupiditate numquam voluptas, deserunt quae repellat nostrum
-                officiis nemo omnis. Reiciendis laudantium consectetur eos
-                error, ipsam nesciunt perspiciatis pariatur commodi iste veniam
-                alias aut fugit assumenda corporis voluptates dignissimos
-                veritatis, <strong>doloremque</strong> tenetur necessitatibus
-                incidunt voluptas consequatur adipisci? Accusantium repudiandae
-                voluptatum corporis exercitationem neque unde ipsa porro
-                distinctio harum? Officia explicabo amet cupiditate voluptatem.
-                Reprehenderit, rerum tenetur minima odio sint, sequi at
-                perferendis voluptas numquam sapiente magni accusantium ut,
-                alias non nam ipsa nulla praesentium ratione impedit consequatur{" "}
-                <strong>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptates, nobis.
-                </strong>{" "}
-                ducimus rem. Reprehenderit ducimus recusandae nemo quam, ea
-                repellendus quisquam cupiditate officiis fugiat atque harum
-                culpa voluptatem qui pariatur adipisci facere aliquid
-                necessitatibus commodi laudantium eligendi tenetur quidem veniam
-                modi? Sint facilis mollitia facere dolore adipisci quibusdam
-                quisquam, doloremque eligendi temporibus inventore quidem
-                suscipit. Magni molestiae eos maxime animi! Dicta magnam
-                perspiciatis fugiat ex corrupti totam soluta debitis voluptates
-                quis eligendi. Expedita corporis quia quisquam iste, illum porro
-                placeat, ex natus ipsam voluptatibus illo! Aspernatur distinctio
-                fugiat velit ad quos ducimus vitae eum ipsum voluptatum fugit
-                non porro, obcaecati modi nesciunt. Molestias libero illum
-                deserunt dolores, rem nam voluptate quas explicabo possimus nisi
-                dolorum totam labore impedit natus quo quis a veniam corporis
-                quibusdam! Mollitia aperiam, necessitatibus, consequatur tempore
-                reprehenderit alias vero est voluptatem non animi quisquam.
-                Nihil, nesciunt? Doloremque similique eos quibusdam nihil
-                laboriosam, enim eum beatae quisquam odio aliquam nulla.
-                Cupiditate, ipsa qui amet ipsum sit pariatur. Quis repellat odit
-                architecto assumenda, ut exercitationem? Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Accusantium ducimus
-                voluptatibus aperiam nam maiores iure,{" "}
-                <strong>
-                  qui eius temporibus sapiente necessitatibus deleniti
-                  repellendus consectetur placeat.
-                </strong>
-              </p>
-            </div>
+            <Article articleIndex="0" />
           </div>
 
           <Carrousel
@@ -128,36 +77,16 @@ const Home = () => {
           <div className="about__team">
             <h2>Notre équipe.</h2>
             <div className="cards__container">
-              <div className="person__presentation">
-                <img src="./assets/img/person1.jpg" alt="employee" />
-                <h3>Nom Prénom</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                  quod impedit ipsam quam, accusamus illum asperiores quis
-                  aliquam ipsum natus praesentium dolorem exercitationem ab
-                  neque!
-                </p>
-              </div>
-              <div className="person__presentation">
-                <img src="./assets/img/person2.jpg" alt="employee" />
-                <h3>Nom Prénom</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                  quod impedit ipsam quam, accusamus illum asperiores quis
-                  aliquam ipsum natus praesentium dolorem exercitationem ab
-                  neque!
-                </p>
-              </div>
-              <div className="person__presentation">
-                <img src="./assets/img/person3.jpg" alt="employee" />
-                <h3>Nom Prénom</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                  quod impedit ipsam quam, accusamus illum asperiores quis
-                  aliquam ipsum natus praesentium dolorem exercitationem ab
-                  neque!
-                </p>
-              </div>
+              {staff.map((employee) => (
+                <div className="person__presentation" key={employee.id}>
+                  <img
+                    src={employee.picture}
+                    alt={"Practicien" + employee.Name}
+                  />
+                  <h3>{employee.Name + " " + employee.Surname}</h3>
+                  <span>{employee.description}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>

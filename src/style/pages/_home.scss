@@ -34,67 +34,6 @@
     }
 }
 
-.more-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 175px;
-    height: 50px;
-    background-color: transparent;
-    margin-top: 100px;
-    border: $color-5 solid 2px;
-    border-radius: 25px;
-    transition: all 0.3s;
-    cursor: pointer;
-
-    &:hover {
-        border: $color-4 solid 2px;
-        transition: all 0.3s;
-
-        .button-container {
-            transform: translateX(120px);
-            transition: all 0.3s;
-            background-color: $color-5;
-
-            i {
-                color: $color-4;
-            }
-        }
-
-        span {
-            transform: translateX(-55px);
-            transition: all 0.3s;
-
-        }
-    }
-
-    span {
-        transform: translateX(0px);
-        transition: all 0.3s;
-        padding-right: 10px;
-        font-size: 14px;
-    }
-
-    .button-container {
-        background-color: $color-4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 25px;
-        transform: translateX(-8px);
-        transition: all 0.3s;
-    }
-
-}
-
-#about {
-    position: absolute;
-    bottom: 80px;
-}
-
 .about {
     display: flex;
     justify-content: center;
@@ -116,9 +55,10 @@
         top: 0%;
         left: 50%;
         transform: translateX(-50%);
-        z-index: -1;
-        color: lighten($color-1, 3%);
+        z-index: 2;
         width: 2000px;
+        opacity: 0.08;
+        color: $color-2;
     }
 
     &__presentation {
@@ -152,53 +92,7 @@
         }
     }
 
-    .about__text {
-        flex: 2;
 
-        h2 {
-            margin-top: $title-tm;
-            display: inline-block;
-            position: relative;
-
-
-
-            &::before {
-
-                @include decorations;
-                right: -3050px;
-                width: 3000px;
-                height: 1px;
-                background: $color-5;
-                transform: translateY(-50%);
-                box-sizing: border-box;
-            }
-
-            &::after {
-                @include decorations;
-                right: -50px;
-                width: 10px;
-                height: 10px;
-                background: $color-2;
-                border-radius: 50%;
-                margin-top: -5px;
-                transform: translateY(-50%);
-                bottom: -30px;
-                transform: none;
-            }
-        }
-
-        p {
-            z-index: 1;
-            padding-top: $item-tp;
-
-
-            strong {
-                color: lighten($color: $color-4, $amount: 20%);
-                font-weight: bolder;
-
-            }
-        }
-    }
 
 
     &__team {
@@ -213,7 +107,7 @@
         position: relative;
 
         h2 {
-            z-index: 2;
+
             margin-top: $item-tm;
             margin-bottom: $title-bm;
             position: relative;
@@ -268,13 +162,15 @@
 
         &::before {
             content: "TEAM";
-            font-size: 10rem;
+            font-size: 9rem;
+            font-weight: 900;
             position: absolute;
-            top: 0%;
-            left: 35%;
+            top: -20px;
+            left: 40%;
             transform: translateX(-50%);
-            z-index: 0;
-            color: lighten($color-2, 3%);
+            z-index: 2;
+            opacity: 0.10;
+            color: $color-5;
         }
 
         .person__presentation {
@@ -286,7 +182,7 @@
 
             max-width: 300px;
             max-height: 470px;
-            margin: 20px auto 20px auto;
+            margin: 20px 20px 20px 20px;
             @include magic-border-hover(2px, $color-4, 0.3s, 1);
 
 
@@ -325,7 +221,7 @@
             &:hover {
 
 
-                p {
+                span {
                     transform: translateY(-200px);
                     transition: all 0.5s;
                     opacity: 1;
@@ -374,7 +270,7 @@
 
             }
 
-            p {
+            span {
                 padding-top: $title-tp;
                 transition: all 0.2s;
                 width: 90%;
@@ -435,7 +331,7 @@
         max-width: 7rem;
     }
 
-    .about .about__text,
+
     .about .about__team {
         flex: 2;
 

@@ -1,15 +1,18 @@
 .about__carrousel {
     width: 60%;
     position: relative;
+    margin-top: $large-gap;
 
     &::before {
         content: "TERRA MED";
         font-size: 9rem;
         font-weight: 900;
         position: absolute;
-        z-index: -1;
+        z-index: 2;
         color: lighten($color-1, 3%);
         width: 2000px;
+        opacity: 0.08;
+        color: $color-2;
     }
 
     .carrousel__title {
@@ -49,7 +52,7 @@
 
         position: relative;
         width: 100%;
-        height: 600px;
+        height: 800px;
         border-radius: 25px;
         overflow: hidden;
         margin: auto;

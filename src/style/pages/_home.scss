@@ -55,7 +55,7 @@
     overflow: hidden;
 
     &::before {
-        content: "À PROPOS";
+        content: "ABOUT";
         font-size: 10rem;
         font-weight: 900;
         position: absolute;
@@ -322,9 +322,9 @@
     .about {
         &::before {
             font-size: 9rem;
-            top: 50px;
+            top: -40px;
             left: 350px;
-            font-weight: 700;
+            font-weight: 900;
         }
     }
 
@@ -368,8 +368,8 @@
     .about {
 
         &::before {
-            font-size: 4rem;
-            top: 30px;
+            font-size: 7rem;
+            top: -25px;
             left: 200px;
             font-weight: 900;
         }

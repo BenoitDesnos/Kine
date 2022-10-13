@@ -1,7 +1,3 @@
-:root {
-    --vh: 1vh;
-}
-
 .home-main {
     background-image: url(./../../../public/assets/img/lady-ball.jpg);
     background-size: cover;
@@ -12,7 +8,7 @@
 
     width: 100%;
     min-height: 100vh;
-    min-height: calc(var(--vh, 1vh) * 100);
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -318,6 +314,11 @@
 }
 
 @media screen and (max-width: map-get($breakpoints, tablet)) {
+
+    .home-main {
+        min-height: 95vh;
+    }
+
     .about {
         &::before {
             font-size: 9rem;

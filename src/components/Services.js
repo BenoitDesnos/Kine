@@ -1,7 +1,6 @@
-import services from "../data/services.json";
 import { NavLink } from "react-router-dom";
 
-function Services() {
+function Services({ services }) {
   return (
     <div className="services">
       <h2 className="services__title">Nos compétences !</h2>

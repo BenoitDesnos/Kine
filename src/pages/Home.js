@@ -11,29 +11,12 @@ import Article from "../components/Article";
 import ScrollDown from "./../components/ScrollDown";
 import staff from "../data/staff.json";
 
-const Home = () => {
+const Home = ({ variants }) => {
   const [clickCount, setClickCount] = useState(0);
   const [picturesArray, setPicturesArray] = useState([]);
   useEffect(() => {
     setPicturesArray(Pictures[0].pictures);
   }, []);
-
-  const variants = {
-    initial: {
-      opacity: 0,
-      transition: { duration: 0.5 },
-      x: 100,
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-    },
-    exit: {
-      opacity: 0,
-      transition: { duration: 0.3 },
-      x: -100,
-    },
-  };
 
   return (
     <div>

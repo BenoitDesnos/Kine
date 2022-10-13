@@ -1,11 +1,11 @@
 @font-face {
     font-family: "font-1";
-    src: url(../assets/fonts/Questrial-Regular.ttf);
+    src: url(../../assets/fonts/Questrial-Regular.ttf);
 }
 
 @font-face {
     font-family: "font-2";
-    src: url(../assets/fonts/Michroma-Regular.ttf);
+    src: url(../../assets/fonts/Michroma-Regular.ttf);
 }
 
 $font-1: "font-1",
@@ -41,6 +41,7 @@ $breakpoints: (mobile: 568px,
 /*  -------------------- colors ---------------------- */
 $color-1: #9a402f;
 $color-2: #191F22;
+$color-2--see-through: #191f2286;
 $color-3: #964c17;
 $color-4: #cc7c24;
 $color-5: #ccc4bc;
@@ -82,10 +83,6 @@ $title-rm: 30px;
         background: $color-2;
     }
 }
-
-
-
-
 
 
 body {

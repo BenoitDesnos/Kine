@@ -1,5 +1,5 @@
 .banner {
-    background-image: url(./../../../public/assets/img/banner.jpg);
+
     background-size: cover;
     background-position-x: center;
     background-position-y: 20%;
@@ -9,6 +9,12 @@
     width: 100%;
     height: 90vh;
     position: relative;
+
+    .banner__cover {
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
 
     img {
         position: absolute;

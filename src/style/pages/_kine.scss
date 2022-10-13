@@ -2,10 +2,25 @@
     overflow: hidden;
     scroll-behavior: smooth;
 
+
+    .banner {
+        background-image: url(./../../../public/assets/img/banner.jpg);
+
+    }
+
+
     .kine__articles {
 
         max-width: 70%;
         margin: auto;
         margin-bottom: $large-gap;
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile)) {
+    .kine {
+        .kine__articles {
+            max-width: 90%;
+        }
     }
 }

@@ -89,12 +89,7 @@ html {
     height: -webkit-fill-available;
 }
 
-@supports (-webkit-touch-callout: none) {
-    body {
-        /* The hack for Safari */
-        min-height: -webkit-fill-available;
-    }
-}
+
 
 body {
     font-family: $font-1;

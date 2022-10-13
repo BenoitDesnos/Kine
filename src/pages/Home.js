@@ -16,6 +16,14 @@ const Home = ({ variants }) => {
   const [picturesArray, setPicturesArray] = useState([]);
   useEffect(() => {
     setPicturesArray(Pictures[0].pictures);
+
+    const homeMain = document.querySelector(".home-main");
+
+    function resetHeight() {
+      homeMain.style.height = window.innerHeight + "px";
+    }
+    window.addEventListener("resize", resetHeight);
+    resetHeight();
   }, []);
 
   return (

@@ -39,8 +39,8 @@ $breakpoints: (mobile: 568px,
     tablet: 1024px,
 );
 /*  -------------------- colors ---------------------- */
-$color-2: #191F22;
 $color-1: #9a402f;
+$color-2: #191F22;
 $color-3: #964c17;
 $color-4: #cc7c24;
 $color-5: #ccc4bc;
@@ -83,9 +83,6 @@ $title-rm: 30px;
     }
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
 
 

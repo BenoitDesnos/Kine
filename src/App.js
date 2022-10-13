@@ -7,18 +7,21 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 import { AnimatePresence } from "framer-motion";
+import ScrollToTop from "./components/scrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
       <AnimatePresence>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
-          <Route path="/Kine" element={<Kine />}></Route>
-          <Route path="/Osteo" element={<Osteo />}></Route>
-          <Route path="/*" element={<NotFound />}></Route>
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
+            <Route path="/Kine" element={<Kine />}></Route>
+            <Route path="/Osteo" element={<Osteo />}></Route>
+            <Route path="/*" element={<NotFound />}></Route>
+          </Routes>
+        </ScrollToTop>
       </AnimatePresence>
     </BrowserRouter>
   );

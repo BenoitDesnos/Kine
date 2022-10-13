@@ -7,8 +7,11 @@ import Banner from "../components/Banner";
 import Services from "./../components/Services";
 
 const Kine = () => {
+  const navigation = document.querySelector(".navigation");
+
+  console.log(navigation);
   return (
-    <>
+    <div className="kine">
       <Navigation />
       <Banner />
 
@@ -17,7 +20,7 @@ const Kine = () => {
       </div>
       <Services />
       <Footer />
-    </>
+    </div>
   );
 };
 

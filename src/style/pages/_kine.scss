@@ -1,6 +1,11 @@
-.kine__articles {
+.kine {
+    overflow: hidden;
+    scroll-behavior: smooth;
 
-    max-width: 70%;
-    margin: auto;
-    margin-bottom: $large-gap;
+    .kine__articles {
+
+        max-width: 70%;
+        margin: auto;
+        margin-bottom: $large-gap;
+    }
 }

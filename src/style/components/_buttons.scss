@@ -87,6 +87,7 @@
     transform: translate(-50%, -50%);
     bottom: 0;
     left: 50%;
+    scroll-behavior: smooth;
 }
 
 #section10 a span {
@@ -117,7 +118,6 @@
     animation: sdb10 2s infinite;
     box-sizing: border-box;
 }
-
 
 
 #anchor {
@@ -162,5 +162,17 @@
 
     100% {
         opacity: 0;
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, tablet)) {
+
+    #section10 {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: 1%;
+        right: 50%;
+        transform: translateX(50%);
     }
 }

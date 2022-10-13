@@ -1,0 +1,221 @@
+.services {
+
+    background-color: $color-2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .services__title {
+        margin-top: $large-gap;
+        margin-bottom: $large-gap;
+        position: relative;
+        width: 70%;
+        border-bottom: 1px dashed $color-5;
+
+        &::before {
+
+            @include decorations;
+            left: -3050px;
+            width: 3000px;
+            height: 1px;
+            background: $color-5;
+            transform: translateY(-50%);
+            box-sizing: border-box;
+        }
+
+        &::after {
+            @include decorations;
+            left: -50px;
+            width: 10px;
+            height: 10px;
+            background: $color-4;
+            border-radius: 50%;
+            margin-top: -5px;
+            transform: translateY(-50%);
+            bottom: -30px;
+            transform: none;
+        }
+    }
+
+    .services__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 70%;
+        margin: 0 auto;
+        padding: 0 $medium-gap $large-gap $medium-gap;
+        gap: 40px;
+        min-width: 850px;
+        border-left: 1px dashed $color-4;
+        border-right: 1px dashed $color-4;
+
+
+
+        li {
+            width: 100%;
+
+            .service {
+                display: flex;
+                flex-direction: column;
+                max-width: 400px;
+                width: 80%;
+                margin: auto;
+                background-color: lighten($color: $color-2, $amount: 5%);
+                padding: 20px;
+
+
+                .service__infos {
+
+
+                    .service__title {
+                        font-size: map-get($font-size, title2) * 0.6;
+                        padding: 20px 10px;
+                    }
+
+                    .service__description {
+                        font-size: map-get($font-size, title2) * 0.5;
+                        margin: 0px 10px 20px 10px;
+
+                        display: block;
+                        /* Fallback for non-webkit */
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+
+
+                .service__picture__container {
+                    height: 300px;
+                    width: 100%;
+
+                    .service__picture {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, tablet)) {
+
+    .services {
+
+        .services__title {
+            margin-bottom: $medium-gap;
+
+            &::before {
+
+                @include decorations;
+                left: 0%;
+                width: 1100px;
+
+            }
+
+            &::after {
+                @include decorations;
+                left: 0%;
+            }
+        }
+
+        .services__container {
+            grid-template-columns: repeat(1, 1fr);
+            min-width: 0px;
+            padding: 0 $medium-gap $medium-gap $medium-gap;
+
+            li {
+
+                .service {
+
+
+                    .service__infos {
+
+
+                        .service__title {
+                            font-size: map-get($font-size, title2) * 0.6;
+
+                        }
+
+
+                    }
+
+
+                }
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile)) {
+    .services {
+
+        .services__title {
+            width: 90%;
+            margin-bottom: $medium-gap;
+            border: none;
+
+            &::before {
+
+                @include decorations;
+                left: 0%;
+                width: 1100px;
+
+            }
+
+            &::after {
+                @include decorations;
+                left: 0%;
+            }
+        }
+
+        .services__container {
+            width: 90%;
+            padding: 0px 0px $medium-gap 0px;
+            border: none;
+
+            li {
+
+                .service {
+
+                    width: 100%;
+
+                    .service__infos {
+
+
+                        .service__title {
+                            font-size: map-get($font-size, title2) * 0.6;
+
+                        }
+
+                        .service__description {
+                            font-size: map-get($font-size, paragraph) * 0.8;
+                        }
+                    }
+
+                    .service__picture__container {
+                        height: 300px;
+                        width: 100%;
+
+
+
+                    }
+
+
+                }
+            }
+
+        }
+
+    }
+
+}

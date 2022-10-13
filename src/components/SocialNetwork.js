@@ -1,6 +1,6 @@
 import React from "react";
 
-const SocialNetwork = () => {
+const SocialNetwork = ({ isScrolled }) => {
   const anim = () => {
     const icons = document.querySelectorAll(".social-network a");
     icons.forEach((link) => {
@@ -15,7 +15,13 @@ const SocialNetwork = () => {
     });
   };
   return (
-    <div className="social-network">
+    <div
+      className={
+        isScrolled
+          ? "social-network social-network--scrolled"
+          : "social-network"
+      }
+    >
       <ul className="content content-row">
         <a
           href="https://www.facebook.com"

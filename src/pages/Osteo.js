@@ -23,7 +23,9 @@ const Osteo = ({ variants }) => {
         <Article articleIndex="2" />
       </div>
 
-      <Services services={servicesData} />
+      <Services services={servicesData}>
+        <h2 className="services__title">Les services d'osthéopathie</h2>
+      </Services>
       <Footer />
     </motion.div>
   );

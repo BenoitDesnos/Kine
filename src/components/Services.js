@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 
-function Services({ services }) {
+function Services({ services, children }) {
   return (
     <div className="services">
-      <h2 className="services__title">Nos compétences !</h2>
+      {children}
       <ul className="services__container">
         {services.map((service) => (
           <li key={service.id}>

@@ -27,7 +27,10 @@ const Kine = ({ variants }) => {
       <div className="kine__articles">
         <Article articleIndex="1" />
       </div>
-      <Services services={servicesData} />
+      <Services services={servicesData}>
+        <h2 className="services__title">La kinésithérapie chez Terra-Med !</h2>
+      </Services>
+
       <Footer />
     </motion.div>
   );

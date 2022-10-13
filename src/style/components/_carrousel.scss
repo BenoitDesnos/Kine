@@ -93,8 +93,8 @@
 @media screen and (max-width: map-get($breakpoints, tablet)) {
     .about__carrousel {
         &::before {
-            font-size: 9rem;
-            top: 65px;
+            font-size: 8rem;
+            top: -20px;
             left: -170px;
             font-weight: 700;
         }
@@ -112,7 +112,7 @@
 
         .carrousel__title {
             position: relative;
-            margin-top: $large-gap *2;
+            margin-top: $large-gap;
             width: 200%;
 
             &::before {
@@ -139,10 +139,16 @@
         width: 85%;
 
         &::before {
-            top: 65px;
-            left: -25px;
-            font-size: 5rem;
+            top: 15px;
+            left: -40px;
+            font-size: 4rem;
             font-weight: 900;
+
+        }
+
+        .carrousel__title {
+
+            margin-top: $medium-gap;
 
         }
 

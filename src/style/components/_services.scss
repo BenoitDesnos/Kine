@@ -10,7 +10,7 @@
     .services__title {
         margin-top: $large-gap;
         margin-bottom: $large-gap;
-        padding-top: 20px;
+
         position: relative;
         width: 70%;
 
@@ -51,17 +51,9 @@
 
         position: relative;
 
-
-
-
-
-
-
         li {
             width: 100%;
             z-index: 1;
-
-
 
             .service {
                 border: 1px dotted $color-4;
@@ -109,8 +101,6 @@
                 .service__infos {
                     z-index: 1;
 
-
-
                     .service__title {
                         font-size: map-get($font-size, title2) * 0.6;
                         padding: 20px 10px;
@@ -139,7 +129,7 @@
                     .service__picture {
                         width: 100%;
                         height: 100%;
-                        border-radius: 10px;
+
                         object-fit: cover;
                     }
                 }

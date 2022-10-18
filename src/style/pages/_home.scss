@@ -185,6 +185,7 @@
         .person__presentation {
             display: flex;
             flex-direction: column;
+            position: relative;
 
             align-items: center;
             text-align: center;
@@ -193,6 +194,18 @@
             max-height: 470px;
             margin: 20px 20px 20px 20px;
             @include magic-border-hover(2px, $color-4, 0.3s, 1);
+
+            img {
+
+                flex: 1 0;
+                max-width: 90%;
+
+                height: 425px;
+                min-width: 200px;
+                margin: 10px;
+                transition: opacity 0.3s;
+
+            }
 
 
             &:not(:hover) {
@@ -297,19 +310,7 @@
 
         }
 
-        img {
-            position: relative;
-            flex: 1 0;
-            max-width: 90%;
-            height: auto;
-            min-width: 200px;
-            margin: 10px;
-            transition: opacity 0.3s;
 
-
-
-
-        }
     }
 }
 
@@ -378,6 +379,10 @@
 
             max-width: 250px;
             max-height: 400px;
+
+            img {
+                height: 358px;
+            }
         }
 
 

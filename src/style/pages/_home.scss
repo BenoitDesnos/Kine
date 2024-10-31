@@ -317,7 +317,7 @@
 @media screen and (max-width: map-get($breakpoints, tablet)) {
 
     .home-main {
-        min-height: 90vh;
+        min-height: 100dvh;
     }
 
     .about {
